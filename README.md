@@ -1,5 +1,5 @@
-# Nanopore_WEHI_cjw
-#Signal processing associated with ONT MinION nanopore data
-# This is primitive - I'm just getting started with GitHub, don't expect much of value for a while.
-# cjw      21July2016
+# Nanopore_Microbiome_WEHI_cjw
+# Microbiome analysis via nanopoer-sequenced amplicon data
+# Code underpinning draft paper Feb 2024 
+# cjw      07 February 2024
 
