@@ -58,14 +58,15 @@ PART 1: Database Generation.
 
 
 PART 2: Dataset Generation.
+        No suitable 16S and 23S rRNA gene datasets created with Oxford Nanopore Technoly's R10.4.1 system were available. However an in-silico method to obtain a useful approximation to what could be produced was created to process a metagenomic dataset developed by Sereika et al (M.Sereika et al. NAR July 2022)
         The datasets generated for this study consisted of 5 16S datasets and 5 
         corresponding 23S datasets.  
-        Consider the 16S datasets.  A primary dataset is formed by extracting a 16S rRNA 
+        Consider the 16S datasets.  A primary dataset was formed by extracting a 16S rRNA 
         gene sequence from any read found to have one. The Rscript
         
             extract_Sereika_16S23S_v10.R
             
-        which requires
+        which required
                         rrn_operon_in_silico_16S_ITS_23S_primers_04Aug2021.R
                         
         generates fastq files for each of 16S and 23S rRNA gene sequences.  The 16S fastq
@@ -87,7 +88,7 @@ PART 2: Dataset Generation.
         Note that this code is very demanding of computational resources.  As written a 
         block of 250,000 reads of the Sereika et al. D6322 metagenomic dataset takes 
         about 1 hour to run using 56 cores on an HPC cluster.  It is expected that this 
-        code would be unnecessary for users at the generation of amplicon sequences would 
+        code would be unnecessary for users as the generation of amplicon sequences would 
         be via laboratory methods and nanopore sequencing of a library prepared from 
         genomic DNA.
              
@@ -97,6 +98,8 @@ PART 3: Denoising, ASV alignment, Microbiota Profiling.
         Denoising uses the Murrell labs RAD denoiser, which is written in Julia.  A script
         for doing this was generously provided by Ben Murrell and modified to provide 
         additional output by the lead author of this paper.  That script is 
+        
+                             RADSereika.ipynb
              
         The script is edited to give the names of the input fastq file of noisy reads, and 
         the various output files, successively for each dataset. 
