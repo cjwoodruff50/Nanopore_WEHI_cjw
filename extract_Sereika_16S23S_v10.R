@@ -41,10 +41,9 @@ numcores = 56
 ##########################           FUNCTIONS           ##############################
 ##########################                               ##############################
 #######################################################################################
-source("/stornext/Bioinf/data/lab_speed/cjw/microbiome/scripts/Rscripts/rrn_operon_in_silico_16S_ITS_23S_primers_04Aug2021.R")
+source("/stornext/Bioinf/data/lab_speed/cjw/microbiome/scripts/Rscripts/rrn_operon_in_silico_16S_ITS_23S_primers_30May2023.R")
 nprimers = length(primers)
 # Note that primer_sets 1 to 4 give the 16S 5', 16S 3', 23S 5' and 23S 3' primers, respectively.
-source("/stornext/Bioinf/data/lab_speed/cjw/microbiome/scripts/Rscripts/rrn_16S_ITS_23S_boundaries.R")
 
 primerAlign = function(i,frags){
   # Alignment of a single primer, identified by the list member i, against a list
