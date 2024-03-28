@@ -29,14 +29,11 @@ PART 1: Database Generation.
         
         The R script   identify_extract_rrnOperons_workDB_v01.R     is executed to extract
         the 16S and 23S sequences (and Z2 and Z5 sequences should those be of interest) of
-        each genome.  This script requires the additional scripts
+        each genome.  This script requires the additional script
         
-              rrn_operon_in_silico_16S_ITS_23S_primers_04Aug2021.R
-              rrn_16S_ITS_23S_boundaries.R
-              rrn_fragment_evidence_generation.R
-              ITS_subelement_sequences.R
+              rrn_operon_in_silico_16S_ITS_23S_primers_30May2023.R
               
-        Some characterisation of the extracted sequences for each genome os provided by 
+        Some characterisation of the extracted sequences for each genome is provided by 
         
                    unique_operons_count.R
                    
@@ -70,7 +67,6 @@ PART 2: Dataset Generation.
             
         which requires
                         rrn_operon_in_silico_16S_ITS_23S_primers_04Aug2021.R
-                        rrn_16S_ITS_23S_boundaries.R 
                         
         generates fastq files for each of 16S and 23S rRNA gene sequences.  The 16S fastq
         file contains records from any read that was found to have a complete 16S sequence,
@@ -107,7 +103,7 @@ PART 3: Denoising, ASV alignment, Microbiota Profiling.
         
         The RAD output from processing each dataset is used as input to the Rcode 
         
-            species_strain_analysis_residualAmbiguity_v01.R
+            species_strain_analysis_residualAmbiguity_v02.R
             
         This code aligns each Amplicon Sequence Variant from RAD against every entry in 
         the appropriate database (16S or 23S), using blastn running locally.  The blastn
